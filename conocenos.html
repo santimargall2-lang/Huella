@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel=stylesheet href="css/bootstrap.min.css">
+    <title>Huella</title>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(255, 254, 254, 0.15));
+        }
+
+        /* Colores base y activo bien visibles */
+        .navbar .nav-link {
+            color: #000;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #333;
+        }
+
+        .navbar .nav-link.active {
+            color: rgb(25, 135, 84) !important;
+            font-weight: 700;
+            border-bottom: 2px solid rgb(25, 135, 84);
+        }
+
+        /* utilidades suaves */
+        .shadow-soft {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+        }
+
+        .rounded-2xl {
+            border-radius: 1.25rem;
+        }
+
+        .object-fit-cover {
+            object-fit: cover;
+        }
+
+        /* línea de tiempo simple */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 1.2rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #e9ecef;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline-item .dot {
+            position: absolute;
+            left: .8rem;
+            top: .35rem;
+            width: .9rem;
+            height: .9rem;
+            background: rgb(25, 135, 84);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio" class="mt-5 pt-4">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_huellaok.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="contacto.html" style="color: rgb(0, 0, 0);">Contacto</a>
+                        <a class="nav-link" href="mascotas.html" style="color: rgb(0, 0, 0);">Mascotas</a>
+                        <a class="nav-link" href="adopciones.html" style="color: rgb(0, 0, 0);">Adopciones</a>
+                        <a class="nav-link active" href="#" style="color: rgb(0, 0, 0);">Conocenos</a>
+                        <a class="nav-link" href="noticias.html" style="color: rgb(0, 0, 0);">Noticias</a>
+                        <a class="nav-link" href="donar.html" style="color: rgb(0, 0, 0);">Donar</a>
+                        <a class="nav-link" href="ingresar.html" style="color: rgb(0, 0, 0);">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- ============ CONÓCENOS ============ -->
+    <section id="conocenos" class="py-5">
+        <div class="container">
+
+            <!-- Hero -->
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge text-bg-success mb-2">Conócenos</span>
+                    <h1 class="display-6 fw-bold mb-3">Rescatamos, rehabilitamos y damos segundas oportunidades</h1>
+                    <p class="lead text-secondary">
+                        Somos un proyecto sin fines de lucro dedicado al rescate de perros y gatos, la atención
+                        veterinaria
+                        y la promoción de adopciones responsables. Trabajamos con voluntariado y educación comunitaria.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="adopciones.html" class="btn btn-success btn-lg">Quiero adoptar</a>
+                        <a href="#ayuda" class="btn btn-outline-success btn-lg">Cómo ayudar</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9 rounded-2xl shadow-soft overflow-hidden">
+                        <!-- Reemplaza por tu imagen -->
+                        <img src="img/local.png" alt="Equipo del refugio" class="w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misión / Visión / Qué hacemos -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+                <div class="col">
+                    <div class="card h-100 rounded-2xl shadow-soft">
+                        <div class="card-body">
+                            <h3 class="h5">Nuestra misión</h3>
+                            <p class="text-secondary mb-0">
+                                Brindar contención, atención médica y un hogar definitivo a animales en situación de
+                                vulnerabilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 rounded-2xl shadow-soft">
+                        <div class="card-body">
+                            <h3 class="h5">Nuestra visión</h3>
+                            <p class="text-secondary mb-0">
+                                Una comunidad que valora el bienestar animal con menos abandono y más tenencia
+                                responsable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 rounded-2xl shadow-soft">
+                        <div class="card-body">
+                            <h3 class="h5">Qué hacemos</h3>
+                            <ul class="text-secondary mb-0 ps-3">
+                                <li>Rescate y hogares de tránsito</li>
+                                <li>Atención veterinaria y castraciones</li>
+                                <li>Campañas de adopción</li>
+                                <li>Charlas en escuelas y barrios</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas -->
+            <div class="row g-4 text-center mt-5">
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white rounded-2xl shadow-soft">
+                        <div class="h2 fw-bold mb-0">+1.200</div>
+                        <div class="text-secondary">Adopciones</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white rounded-2xl shadow-soft">
+                        <div class="h2 fw-bold mb-0">+2.800</div>
+                        <div class="text-secondary">Castraciones</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white rounded-2xl shadow-soft">
+                        <div class="h2 fw-bold mb-0">95%</div>
+                        <div class="text-secondary">Reinserción</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white rounded-2xl shadow-soft">
+                        <div class="h2 fw-bold mb-0">+150</div>
+                        <div class="text-secondary">Voluntarios</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historia + Cómo ayudar -->
+            <div class="row mt-5">
+                <div class="col-lg-7">
+                    <h2 class="h4 mb-3">Nuestra historia</h2>
+                    <div class="position-relative timeline ps-1">
+                        <div class="timeline-item mb-4">
+                            <span class="dot"></span>
+                            <h3 class="h6 mb-1">2018 — Primeros rescates</h3>
+                            <p class="text-secondary mb-0">Iniciamos como colectivo barrial con jornadas solidarias.</p>
+                        </div>
+                        <div class="timeline-item mb-4">
+                            <span class="dot"></span>
+                            <h3 class="h6 mb-1">2020 — Red veterinaria</h3>
+                            <p class="text-secondary mb-0">Convenios para castraciones y atención de urgencia.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <h3 class="h6 mb-1">2023 — Centro de tránsito</h3>
+                            <p class="text-secondary mb-0">Ampliamos espacios y talleres de educación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" id="como-ayudar">
+                    <h2 class="h4 mb-3">Cómo ayudar</h2>
+                    <div class="list-group rounded-2xl shadow-soft">
+                        <a href="adopciones.html" class="list-group-item list-group-item-action">Adoptá o sé hogar de
+                            tránsito</a>
+                        <a href="#" class="list-group-item list-group-item-action">Sumate como
+                            voluntario/a</a>
+                        <a href="#" class="list-group-item list-group-item-action">Donaciones (alimentos, insumos,
+                            $)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Difundí en redes nuestras
+                            campañas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipo -->
+            <div class="mt-5" id="equipo">
+                <h2 class="h4 mb-4">Nuestro equipo</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                    <!-- Tarjeta ejemplo (duplica y edita) -->
+                    <div class="col">
+                        <div class="card h-100 rounded-2xl shadow-soft">
+                            <img src="img/funcionarios/funcionario1.png" class="card-img-top" alt="Miembro del equipo">
+                            <div class="card-body">
+                                <h3 class="h6 mb-1">Anastasia Palladino</h3>
+                                <p class="text-secondary small mb-0">Rol — Rescatista</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 rounded-2xl shadow-soft">
+                            <img src="img/funcionarios/funcionario2.png" class="card-img-top" alt="Miembro del equipo">
+                            <div class="card-body">
+                                <h3 class="h6 mb-1">Joaquin Cabrera</h3>
+                                <p class="text-secondary small mb-0">Rol — Funcionario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 rounded-2xl shadow-soft">
+                            <img src="img/funcionarios/veterinario1.png" class="card-img-top" alt="Miembro del equipo">
+                            <div class="card-body">
+                                <h3 class="h6 mb-1">Lucio Méndez</h3>
+                                <p class="text-secondary small mb-0">Rol — Veterinario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 rounded-2xl shadow-soft">
+                            <img src="img/funcionarios/propietaria.png" class="card-img-top" alt="Miembro del equipo">
+                            <div class="card-body">
+                                <h3 class="h6 mb-1">Josefina Alves</h3>
+                                <p class="text-secondary small mb-0">Rol — Propietaria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA final -->
+            <div class="mt-5 p-4 p-md-5 bg-white rounded-2xl shadow-soft text-center" id="ayuda">
+                <h2 class="h4 mb-2">¿Te sumás a cambiar una vida?</h2>
+                <p class="text-secondary mb-4">Tu tiempo, tu casa o tu donación pueden ser el comienzo de una nueva
+                    historia.</p>
+                <a href="adopciones.html" class="btn btn-success btn-lg me-2">Adoptar</a>
+                <a href="donar.html" class="btn btn-outline-success btn-lg">Donar / Voluntariado</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ========== /CONÓCENOS ========== -->
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+        <section id="contacto" class="py-3 bg-success">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p>
+                                    <a href="index.html"><img src="img/logo_huella2.png" width="50%"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="contacto.html">Ubicación & Horarios</a></p>
+                                <p><a style="color: white;" href="adopciones.html">Adoptá</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Preguntas Frecuentes</a></p>
+                                <p><a style="color: white;" href="contacto.html">Contacto</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Redes Sociales</a></p>
+                                <p><a style="color: white;" href="donar.html">N° de Cuenta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div
+                        class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                        <a class="btn btn-outline-secondary" href="#">Subir</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="container d-flex flex-column flex-md-row justify-content-end align-items-center py-3">
+                        <div class="text-secondary small">© <span id="year"></span> Diseño de Pagina Web - SITEC group
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Botón flotante WhatsApp (Buttons) -->
+    <div class="container-fluid">
+        <button
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: none; border: none; padding: 0; cursor: pointer;">
+            <a href="adopciones.html"> <img src="img/adoptame2.png" alt="Botón" width="180" height="180"> </a>
+
+        </button>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

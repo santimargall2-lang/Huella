@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel=stylesheet href="css/bootstrap.min.css">
+    <title>Huella</title>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(255, 254, 254, 0.15));
+        }
+
+        /* Colores base y activo bien visibles */
+        .navbar .nav-link {
+            color: #000;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #333;
+        }
+
+        .navbar .nav-link.active {
+            color: rgb(25, 135, 84) !important;
+            font-weight: 700;
+            border-bottom: 2px solid rgb(25, 135, 84);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio" class="mt-5 pt-4">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_huellaok.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="contacto.html" style="color: rgb(0, 0, 0);">Contacto</a>
+                        <a class="nav-link" href="mascotas.html" style="color: rgb(0, 0, 0);">Mascotas</a>
+                        <a class="nav-link active" href="#" style="color: rgb(0, 0, 0);">Adopciones</a>
+                        <a class="nav-link" href="conocenos.html" style="color: rgb(0, 0, 0);">Conocenos</a>
+                        <a class="nav-link" href="noticias.html" style="color: rgb(0, 0, 0);">Noticias</a>
+                        <a class="nav-link" href="donar.html" style="color: rgb(0, 0, 0);">Donar</a>
+                        <a class="nav-link" href="ingresar.html" style="color: rgb(0, 0, 0);">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+<!-- ADOPCION / FORMULARIO -->
+    <section id="adopcion" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-3">Solicitud de adopción</h2>
+            <p class="text-secondary">Completá el formulario y nos pondremos en contacto. Todos los campos marcados con * son obligatorios.</p>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="animalSelect" class="form-label required">Animal</label>
+                <select id="animalSelect" class="form-select" required aria-describedby="animalHelp">
+                  <option selected disabled value="">Elegí un animal…</option>
+                  <option value="Milo">Milo (Perro)</option>
+                  <option value="Luna">Luna (Gato)</option>
+                  <option value="Tango">Tango (Perro – en tratamiento)</option>
+                </select>
+                <div class="invalid-feedback">Seleccioná un animal.</div>
+                <div class="form-text form-help" id="animalHelp">Se verificará su aptitud antes de avanzar.</div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="nombre" class="form-label required">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" required>
+                  <div class="invalid-feedback">Ingresá tu nombre.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="apellido" class="form-label required">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" required>
+                  <div class="invalid-feedback">Ingresá tu apellido.</div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label required">Email</label>
+                  <input type="email" class="form-control" id="email" inputmode="email" autocomplete="email" required>
+                  <div class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" inputmode="tel" placeholder="09x xxx xxx">
+                </div>
+                <div class="col-sm-6">
+                  <label for="ciudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="ciudad" placeholder="Montevideo">
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea id="mensaje" class="form-control" rows="3" placeholder="Contanos sobre tu hogar y experiencia con mascotas"></textarea>
+                </div>
+              </div>
+
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="1" id="acepto" required>
+                <label class="form-check-label required" for="acepto">Acepto las condiciones del refugio</label>
+                <div class="invalid-feedback">Debés aceptar las condiciones para continuar.</div>
+              </div>
+
+              <div class="d-flex gap-2 mt-4">
+                <button class="btn btn-success" type="submit">Enviar solicitud</button>
+                <button class="btn btn-outline-success" type="reset">Limpiar</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="p-4 bg-success rounded-3 h-100">
+              <h3 class="h5" style="color: white;">¿Cómo es el proceso?</h3>
+              <ol class="mb-0" style="color: white;">
+                <li>Completá la solicitud con tus datos.</li>
+                <li>Validamos la información y el estado del animal (apto/no apto).</li>
+                <li>Coordinamos una entrevista y visita al refugio.</li>
+                <li>Firmás el acuerdo y ¡listo! Seguimiento post-adopción.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+
+        <section id="contacto" class="py-3 bg-success">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p>
+                                    <a href="index.html"><img src="img/logo_huella2.png" width="50%"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="contacto.html">Ubicación & Horarios</a></p>
+                                <p><a style="color: white;" href="adopciones.html">Adoptá</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Preguntas Frecuentes</a></p>
+                                <p><a style="color: white;" href="contacto.html">Contacto</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Redes Sociales</a></p>
+                                <p><a style="color: white;" href="donar.html">N° de Cuenta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div
+                        class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                        <a class="btn btn-outline-secondary" href="#">Subir</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="container d-flex flex-column flex-md-row justify-content-end align-items-center py-3">
+                        <div class="text-secondary small">© <span id="year"></span> Diseño de Pagina Web - SITEC group
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Botón flotante WhatsApp (Buttons) -->
+    <div class="container-fluid">
+        <button style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: none; border: none; padding: 0; cursor: pointer;">
+            <a href="adopciones.html"> <img src="img/adoptame2.png" alt="Botón" width="180" height="180"> </a>
+            
+        </button>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel=stylesheet href="css/bootstrap.min.css">
+    <title>Huella</title>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .15));
+        }
+
+        /* Colores base y activo bien visibles */
+        .navbar .nav-link {
+            color: #000;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #333;
+        }
+
+        .navbar .nav-link.active {
+            color: rgb(25, 135, 84) !important;
+            font-weight: 700;
+            border-bottom: 2px solid rgb(25, 135, 84);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio" class="mt-5 pt-4">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_huellaok.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="contacto.html" style="color: rgb(0, 0, 0);">Contacto</a>
+                        <a class="nav-link active" href="#" style="color: rgb(0, 0, 0);">Mascotas</a>
+                        <a class="nav-link" href="adopciones.html" style="color: rgb(0, 0, 0);">Adopciones</a>
+                        <a class="nav-link" href="conocenos.html" style="color: rgb(0, 0, 0);">Conocenos</a>
+                        <a class="nav-link" href="noticias.html" style="color: rgb(0, 0, 0);">Noticias</a>
+                        <a class="nav-link" href="donar.html" style="color: rgb(0, 0, 0);">Donar</a>
+                        <a class="nav-link" href="ingresar.html" style="color: rgb(0, 0, 0);">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Mascotas: Tabs + Grids -->
+    <section id="Mascotas" class="py-5">
+        <div class="container">
+            <h2 class="mb-3">Mascotas Disponibles:</h2>
+            <!-- NAV TABS (Componente extra) -->
+            <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-entradas-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-entradas" type="button" role="tab" aria-controls="pills-entradas"
+                        aria-selected="true">Perros</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-principales-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-principales" type="button" role="tab" aria-controls="pills-principales"
+                        aria-selected="false">Gatos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-postres-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-postres" type="button" role="tab" aria-controls="pills-postres"
+                        aria-selected="false">Otros</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Perros -->
+                <div class="tab-pane fade show active" id="pills-entradas" role="tabpanel"
+                    aria-labelledby="pills-entradas-tab" tabindex="0">
+                    <div class="row g-4 py-4">
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro1.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Draco</h3>
+                                    <p class="card-text text-center">Mestizo - 4 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro2.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Rocky</h3>
+                                    <p class="card-text text-center">Mestizo - 3 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro3.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Luna</h3>
+                                    <p class="card-text text-center">Mestizo - 2 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 py-4"> <!-- 2da fila de perros-->
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro4.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Max</h3>
+                                    <p class="card-text text-center">Mestizo - 8 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro5.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Tobi</h3>
+                                    <p class="card-text text-center">Mestizo - 1 Año</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/perros/perro6.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Sasha</h3>
+                                    <p class="card-text text-center">Mestizo - 5 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gatos -->
+                <div class="tab-pane fade" id="pills-principales" role="tabpanel"
+                    aria-labelledby="pills-principales-tab" tabindex="0">
+                    <div class="row g-4 py-4">
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/gatos/gato1.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Milo</h3>
+                                    <p class="card-text text-center">Mestizo - 1 Año</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/gatos/gato2.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Nina</h3>
+                                    <p class="card-text text-center">Mestizo - 3 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/gatos/gato3.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Tango</h3>
+                                    <p class="card-text text-center">Mestizo - 2 Años</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 py-4"> <!-- 2da fila de gatos-->
+                        <div class="col">
+                            <div class="card h-100 position-relative shadow-sm">
+                                <img src="img/gatos/gato4.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title text-center">Bella</h3>
+                                    <p class="card-text text-center">Mestizo - 1 Año</p>
+                                    <div class="mt-auto d-flex gap-2 justify-content-center">
+                                        <a class="btn btn-success" href="adopciones.html">Solicitar Adopción</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                        </div>
+                        <div class="col">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <section id="contacto" class="py-3 bg-success">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p>
+                                    <a href="index.html"><img src="img/logo_huella2.png" width="50%"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="contacto.html">Ubicación & Horarios</a></p>
+                                <p><a style="color: white;" href="adopciones.html">Adoptá</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Preguntas Frecuentes</a></p>
+                                <p><a style="color: white;" href="contacto.html">Contacto</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Redes Sociales</a></p>
+                                <p><a style="color: white;" href="donar.html">N° de Cuenta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div
+                        class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                        <a class="btn btn-outline-secondary" href="#">Subir</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="container d-flex flex-column flex-md-row justify-content-end align-items-center py-3">
+                        <div class="text-secondary small">© <span id="year"></span> Diseño de Pagina Web - SITEC group
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Botón flotante WhatsApp (Buttons) -->
+    <div class="container-fluid">
+        <button style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: none; border: none; padding: 0; cursor: pointer;">
+            <a href="adopciones.html"> <img src="img/adoptame2.png" alt="Botón" width="180" height="180"> </a>
+            
+        </button>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

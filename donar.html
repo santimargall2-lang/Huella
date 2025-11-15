@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel=stylesheet href="css/bootstrap.min.css">
+    <title>Huella</title>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .15));
+        }
+
+        /* Colores base y activo bien visibles */
+        .navbar .nav-link {
+            color: #000;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #333;
+        }
+
+        .navbar .nav-link.active {
+            color: rgb(25, 135, 84) !important;
+            font-weight: 700;
+            border-bottom: 2px solid rgb(25, 135, 84);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio" class="mt-5 pt-4">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_huellaok.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="contacto.html" style="color: rgb(0, 0, 0);">Contacto</a>
+                        <a class="nav-link" href="mascotas.html" style="color: rgb(0, 0, 0);">Mascotas</a>
+                        <a class="nav-link" href="adopciones.html" style="color: rgb(0, 0, 0);">Adopciones</a>
+                        <a class="nav-link" href="conocenos.html" style="color: rgb(0, 0, 0);">Conocenos</a>
+                        <a class="nav-link" href="noticias.html" style="color: rgb(0, 0, 0);">Noticias</a>
+                        <a class="nav-link active" href="#" style="color: rgb(0, 0, 0);">Donar</a>
+                        <a class="nav-link" href="ingresar.html" style="color: rgb(0, 0, 0);">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- ===================== DONAR ===================== -->
+    <section id="donar" class="py-5">
+        <div class="container">
+
+            <!-- Encabezado -->
+            <div class="text-center mb-4">
+                <span class="badge" style="background:rgba(25,135,84,.12); color:rgb(25,135,84);">Suma tu huella</span>
+                <h1 class="fw-bold mt-2 mb-2">Doná</h1>
+                <p class="text-secondary mb-0">
+                    Tu aporte nos ayuda con alimento, castraciones, vacunación y tratamientos.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Bloque: Aporte económico -->
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <!-- Toggle única / mensual -->
+                            <div class="d-flex justify-content-center gap-2 mb-3" role="group"
+                                aria-label="Tipo de donación">
+                                <input type="radio" class="btn-check" name="donType" id="don-unique" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-success" for="don-unique">Única</label>
+
+                                <input type="radio" class="btn-check" name="donType" id="don-monthly"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-success" for="don-monthly">Mensual</label>
+                            </div>
+
+                            <!-- Montos rápidos -->
+                            <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                                <button class="btn btn-light border amount" data-amount="200">$200</button>
+                                <button class="btn btn-light border amount" data-amount="400">$400</button>
+                                <button class="btn btn-light border amount" data-amount="600">$600</button>
+                                <button class="btn btn-light border amount" data-amount="1000">$1.000</button>
+                                <button class="btn btn-light border amount" data-amount="2000">$2.000</button>
+                            </div>
+
+                            <!-- Monto personalizado -->
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="col-7 col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input id="customAmount" type="number" min="50" step="50" class="form-control"
+                                            placeholder="Otro monto (UYU)">
+                                    </div>
+                                </div>
+                                <div class="col-5 col-sm-4">
+                                    <select id="currency" class="form-select">
+                                        <option value="UYU" selected>UYU</option>
+                                        <option value="USD">USD</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Métodos de pago -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 h-100">
+                                        <h6 class="mb-2">QR / Link de pago</h6>
+                                        <p class="small text-secondary mb-2">Escaneá el QR o usá el botón:</p>
+                                        <!-- Reemplazar por imagen real del QR -->
+                                        <div class="ratio ratio-1x1 mb-2">
+                                            <img src="img/qr.jpg" class="rounded" alt="QR de pago">
+                                        </div>
+                                        <a href="#" class="btn btn-success w-100">Pagar ahora</a>
+                                        <div class="form-text">* Podés indicar “donación Huella”.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 h-100">
+                                        <h6 class="mb-2">Transferencia bancaria</h6>
+                                        <ul class="list-unstyled small mb-3">
+                                            <li><strong>Banco:</strong> BROU</li>
+                                            <li><strong>Cuenta:</strong> 00250016</li>
+                                            <li><strong>Alias:</strong> HUELLA.REFUGIO</li>
+                                            <li><strong>Concepto:</strong> Donación</li>
+                                        </ul>
+                                        <a href="#" class="link-success small">Enviar comprobante</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <!-- Deducción / Recibo -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="receipt">
+                                        <label class="form-check-label" for="receipt">
+                                            Quiero recibo a mi correo
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" id="donorEmail" placeholder="tu@email.com">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque: Donaciones en especie -->
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="mb-3">Doná insumos</h5>
+                            <p class="text-secondary small mb-3">Podés acercarlos a <strong>Huella — Sede
+                                    Central</strong> (ver <a href="contacto.html" class="link-success">Ubicación &
+                                    Horarios</a>).</p>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="p-3 border rounded-3">
+                                        <h6 class="mb-2">Prioridades</h6>
+                                        <ul class="small mb-0">
+                                            <li>Alimento seco para perro/gato (adulto y cachorro)</li>
+                                            <li>Latas húmedas / premios</li>
+                                            <li>Mantas, toallas y frazadas</li>
+                                            <li>Pipetas antipulgas / shampoo medicado</li>
+                                            <li>Collares, correas, platos, jaulas de transporte</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 border rounded-3">
+                                        <h6 class="mb-2">Contactos útiles</h6>
+                                        <p class="small mb-2"><i class="bi bi-envelope me-1"></i> donaciones@huella.org
+                                        </p>
+                                        <p class="small mb-0"><i class="bi bi-telephone me-1"></i> 099 681 613
+                                            (WhatsApp)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparencia e Impacto -->
+            <div class="row g-4 mt-4">
+                <div class="col-lg-6">
+                    <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+                        <h5 class="mb-3">¿En qué se usa tu donación?</h5>
+                        <ul class="small text-secondary mb-0">
+                            <li><strong>50%</strong> Alimentos y cuidados diarios</li>
+                            <li><strong>25%</strong> Veterinaria (castraciones, vacunas, urgencias)</li>
+                            <li><strong>15%</strong> Traslados, limpieza y mantenimiento</li>
+                            <li><strong>10%</strong> Educación y campañas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+                        <h5 class="mb-3">Preguntas frecuentes</h5>
+                        <div class="accordion" id="faqDonar">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a1">¿Puedo cancelar la donación mensual?</button>
+                                </h2>
+                                <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faqDonar">
+                                    <div class="accordion-body small text-secondary">Sí, en cualquier momento.
+                                        Escribinos a <a href="mailto:donaciones@huella.org"
+                                            class="link-success">donaciones@huella.org</a>.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a2">¿Pueden retirar donaciones?</button>
+                                </h2>
+                                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqDonar">
+                                    <div class="accordion-body small text-secondary">Coordinamos retiros en zonas
+                                        cercanas una vez por semana.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a3">¿Entregan recibo?</button>
+                                </h2>
+                                <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqDonar">
+                                    <div class="accordion-body small text-secondary">Sí. Completá tu correo arriba y te
+                                        lo enviamos.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA final -->
+            <div class="mt-4 p-4 p-md-5 bg-success text-white rounded-3 text-center">
+                <h2 class="h4 mb-2">¡Gracias por apoyar a Huella!</h2>
+                <p class="mb-3">Cada aporte mejora la vida de perros y gatos rescatados.</p>
+                <a href="adopciones.html" class="btn btn-light btn-lg">Quiero adoptar</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- =================== /DONAR =================== -->
+
+
+
+    <footer>
+
+        <section id="contacto" class="py-3 bg-success">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p>
+                                    <a href="index.html"><img src="img/logo_huella2.png" width="50%"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="contacto.html">Ubicación & Horarios</a></p>
+                                <p><a style="color: white;" href="adopciones.html">Adoptá</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Preguntas Frecuentes</a></p>
+                                <p><a style="color: white;" href="contacto.html">Contacto</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Redes Sociales</a></p>
+                                <p><a style="color: white;" href="#">N° de Cuenta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div
+                        class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                        <a class="btn btn-outline-secondary" href="#">Subir</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="container d-flex flex-column flex-md-row justify-content-end align-items-center py-3">
+                        <div class="text-secondary small">© <span id="year"></span> Diseño de Pagina Web - SITEC group
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Botón flotante WhatsApp (Buttons) -->
+    <div class="container-fluid">
+        <button
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: none; border: none; padding: 0; cursor: pointer;">
+            <a href="adopciones.html"> <img src="img/adoptame2.png" alt="Botón" width="180" height="180"> </a>
+
+        </button>
+    </div>
+
+
+    <!-- JS mínimo para montos -->
+    <script>
+        (function () {
+            const amountBtns = document.querySelectorAll('.amount');
+            const custom = document.getElementById('customAmount');
+
+            amountBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    custom.value = btn.dataset.amount;
+                    amountBtns.forEach(b => b.classList.remove('btn-success', 'text-white'));
+                    btn.classList.add('btn-success', 'text-white');
+                });
+            });
+        })();
+    </script>
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

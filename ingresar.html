@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel=stylesheet href="css/bootstrap.min.css">
+    <title>Huella</title>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(255, 254, 254, 0.15));
+        }
+
+        /* Colores base y activo bien visibles */
+        .navbar .nav-link {
+            color: #000;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #333;
+        }
+
+        .navbar .nav-link.active {
+            color: rgb(25, 135, 84) !important;
+            font-weight: 700;
+            border-bottom: 2px solid rgb(25, 135, 84);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio" class="mt-5 pt-4">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_huellaok.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="contacto.html" style="color: rgb(0, 0, 0);">Contacto</a>
+                        <a class="nav-link" href="mascotas.html" style="color: rgb(0, 0, 0);">Mascotas</a>
+                        <a class="nav-link" href="adopciones.html" style="color: rgb(0, 0, 0);">Adopciones</a>
+                        <a class="nav-link" href="conocenos.html" style="color: rgb(0, 0, 0);">Conocenos</a>
+                        <a class="nav-link" href="noticias.html" style="color: rgb(0, 0, 0);">Noticias</a>
+                        <a class="nav-link" href="donar.html" style="color: rgb(0, 0, 0);">Donar</a>
+                        <a class="nav-link active" href="#" style="color: rgb(0, 0, 0);">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!-- =================== INGRESAR / REGISTRARSE =================== -->
+    <section id="auth" class="py-5">
+        <div class="container" style="max-width: 880px;">
+            <div class="text-center mb-4">
+                <span class="badge" style="background:rgba(25,135,84,.12);color:rgb(25,135,84);">Bienvenido/a</span>
+                <h1 class="fw-bold mt-2">Ingresar o crear cuenta</h1>
+                <p class="text-secondary mb-0">Accedé para adoptar, apadrinar o gestionar tus donaciones.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs mb-4" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                                type="button" role="tab" aria-controls="login" aria-selected="true">Ingresar</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                                type="button" role="tab" aria-controls="register"
+                                aria-selected="false">Registrarse</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="authTabsContent">
+                        <!-- ========== LOGIN ========== -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form class="needs-validation" novalidate action="#" method="post">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="loginEmail" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                                        <div class="invalid-feedback">Ingresá un correo válido.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="loginPassword" class="form-label">Contraseña</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="loginPassword"
+                                                name="password" required minlength="6">
+                                            <button class="btn btn-outline-secondary toggle-pass" type="button"
+                                                data-target="#loginPassword">👁</button>
+                                            <div class="invalid-feedback">Ingresá tu contraseña.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-between align-items-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="remember">
+                                            <label class="form-check-label" for="remember">Recordarme</label>
+                                        </div>
+                                        <a href="#" class="link-success" data-bs-toggle="modal"
+                                            data-bs-target="#forgotModal">Olvidé mi contraseña</a>
+                                    </div>
+
+                                    <div class="col-12 d-grid">
+                                        <button class="btn btn-success btn-lg" type="submit">Ingresar</button>
+                                    </div>
+
+                                    <!-- Social (opcional / placeholder) -->
+                                    <div class="col-12">
+                                        <div class="text-center text-secondary small my-2">o ingresá con</div>
+                                        <div class="d-flex gap-2 justify-content-center">
+                                            <a class="btn btn-outline-success" href="#">Google</a>
+                                            <a class="btn btn-outline-success" href="#">Facebook</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- ========== REGISTER ========== -->
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form class="needs-validation" novalidate action="#" method="post">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regName">Nombre</label>
+                                        <input type="text" class="form-control" id="regName" name="name" required>
+                                        <div class="invalid-feedback">Ingresá tu nombre.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regLastname">Apellido</label>
+                                        <input type="text" class="form-control" id="regLastname" name="lastname"
+                                            required>
+                                        <div class="invalid-feedback">Ingresá tu apellido.</div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regEmail">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="regEmail" name="email" required>
+                                        <div class="invalid-feedback">Correo inválido.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regPhone">Teléfono (opcional)</label>
+                                        <input type="tel" class="form-control" id="regPhone" name="phone"
+                                            placeholder="+598 9...">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regPass">Contraseña</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="regPass" name="password"
+                                                required minlength="6">
+                                            <button class="btn btn-outline-secondary toggle-pass" type="button"
+                                                data-target="#regPass">👁</button>
+                                            <div class="invalid-feedback">Mínimo 6 caracteres.</div>
+                                        </div>
+                                        <div class="form-text">Usá al menos 6 caracteres (recomendado combinar letras y
+                                            números).</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regPass2">Repetir contraseña</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="regPass2" required>
+                                            <button class="btn btn-outline-secondary toggle-pass" type="button"
+                                                data-target="#regPass2">👁</button>
+                                            <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label" for="regRole">¿Cómo te gustaría ayudar?</label>
+                                        <select id="regRole" name="role" class="form-select" required>
+                                            <option value="" selected disabled>Seleccionar…</option>
+                                            <option value="adoptante">Adoptante</option>
+                                            <option value="padrino">Padrino</option>
+                                            <option value="voluntario">Voluntariado</option>
+                                            <option value="donante">Donante</option>
+                                        </select>
+                                        <div class="invalid-feedback">Elegí una opción.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="terms"
+                                                required>
+                                            <label class="form-check-label" for="terms">
+                                                Acepto los <a href="#" class="link-success">Términos y Condiciones</a> y
+                                                la <a href="#" class="link-success">Política de Privacidad</a>.
+                                            </label>
+                                            <div class="invalid-feedback">Debés aceptar para continuar.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-grid">
+                                        <button class="btn btn-success btn-lg" type="submit">Crear cuenta</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- /tab-content -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= /INGRESAR / REGISTRARSE ================= -->
+
+    <!-- Modal: Olvidé mi contraseña -->
+    <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content needs-validation" novalidate action="#" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotModalLabel">Recuperar contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="recoverEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="recoverEmail" name="email" required>
+                    <div class="form-text">Te enviaremos un enlace para restablecerla.</div>
+                    <div class="invalid-feedback">Ingresá un correo válido.</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Enviar enlace</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer>
+
+        <section id="contacto" class="py-3 bg-success">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p>
+                                    <a href="index.html"><img src="img/logo_huella2.png" width="50%"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="contacto.html">Ubicación & Horarios</a></p>
+                                <p><a style="color: white;" href="adopciones.html">Adoptá</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Preguntas Frecuentes</a></p>
+                                <p><a style="color: white;" href="contacto.html">Contacto</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="clearfix">
+                            <div class="clearfix text-center" data-content="true">
+                                <p><a style="color: white;" href="#">Redes Sociales</a></p>
+                                <p><a style="color: white;" href="donar.html">N° de Cuenta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div
+                        class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                        <a class="btn btn-outline-secondary" href="#">Subir</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="container d-flex flex-column flex-md-row justify-content-end align-items-center py-3">
+                        <div class="text-secondary small">© <span id="year"></span> Diseño de Pagina Web - SITEC group
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Botón flotante WhatsApp (Buttons) -->
+    <div class="container-fluid">
+        <button
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: none; border: none; padding: 0; cursor: pointer;">
+            <a href="adopciones.html"> <img src="img/adoptame2.png" alt="Botón" width="180" height="180"> </a>
+
+        </button>
+    </div>
+
+
+    <!-- JS: Validación Bootstrap + ver/ocultar contraseña + match de contraseñas -->
+    <script>
+        (function () {
+            // Validación Bootstrap
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    // Match de contraseñas en registro
+                    const pass = form.querySelector('#regPass');
+                    const pass2 = form.querySelector('#regPass2');
+                    if (pass && pass2 && pass.value !== pass2.value) {
+                        pass2.setCustomValidity('No coincide');
+                    } else if (pass2) {
+                        pass2.setCustomValidity('');
+                    }
+
+                    if (!form.checkValidity()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+
+            // Ver/ocultar contraseña
+            document.querySelectorAll('.toggle-pass').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = document.querySelector(btn.dataset.target);
+                    if (!target) return;
+                    target.type = target.type === 'password' ? 'text' : 'password';
+                });
+            });
+        })();
+    </script>
+
+
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>
